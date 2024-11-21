@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NEWS活動/新知 CORNER VISION</title>
+
+    <style>
+        /* 米字是萬用字元符號 => 所有的HTML標籤 */
+        * {
+            /* 取消預設邊界 */
+            margin: 0;
+            /* 取消預設縮排 */
+            padding: 0;
+            /* 字型 */
+            font-family: 'Times New Roman', Times, serif;
+            /* font-family: '微軟正黑體'; */
+
+            list-style: none;
+            color: rgb(0, 0, 0);
+        }
+
+        /* 簡易 Reset */
+        /* 做一些預設的處理 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .wrap {
+            /* border: 1px solid rgb(255, 60, 0); */
+            width: 1200px;
+            margin: auto;
+            margin-top: 100px;
+            /* 內容水平對齊置中 */
+            text-align: center;
+        }
+
+        .item {
+            /* border: 1px solid rgb(251, 255, 0); */
+            width: 1200px;
+            margin: auto;
+                        width: 800px;
+        }
+
+        .item h1 {
+            font-size: 35px;
+            color: rgb(255, 255, 255);
+            font-family: Arial, Helvetica, sans-serif;
+            border-bottom: 1px solid #fff;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .nav {
+            /* border: 1px solid rgb(0, 255, 34); */
+            width: 1200px;
+            height: 1600px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .box {
+            /* border: 1px solid red; */
+            /* display: inline-block; */
+            width: 320px;
+            height: 350px;
+            background-color: rgb(255, 255, 255);
+            /* padding: 0px;
+            margin: 20px; */
+            border-radius: 10px;
+            transition: all .5s;
+            /* 陰影效果 */
+            /* box-shadow: 水平位置 垂直位置 模糊度 陰影色彩; */
+            /* box-shadow: 10px -10px 10px #000; */
+
+            /* 上下左右都有陰影區 */
+            /* box-shadow: 0 0 0px rgba(206, 206, 206, 0.3); */
+        }
+
+        /* 碰到色塊 */
+        .box:hover {
+            transform: scale(1.1);
+            border-radius: 15px;
+            transition: all .7s;
+            box-shadow: 0 0 0px rgba(206, 206, 206, 0.3);
+        }
+
+        .box img {
+            /* border: 1px solid red; */
+            width: 300px;
+            height: 200px;
+            transition: all .1s;
+        }
+
+        /* 碰到色塊時的圖片效果 */
+        .box:hover img {
+            transform: scale(1.07);
+            size: cover;
+            position: center;
+
+        }
+
+        .box h3 {
+            font-size: 15px;
+        }
+
+        .box p {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            padding-left: 10px;
+            font-size: 12px;
+            color: rgb(100, 100, 100);
+        }
+
+        .box imgbox {
+            width: 300px;
+            height: 200px;
+            margin-top: 0px;
+        }
+
+
+        .textbox h3 {
+            text-align: center;
+        }
+
+        .footer {
+            /* border: 1px solid rgb(21, 255, 0); */
+            width: 1200px;
+            margin-top: 100px;
+            text-align: center;
+            background-color: #333;
+            padding: 20px;
+        }
+
+        #info {
+            font-size: 14px;
+            align-self: center;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .footer h4 {
+            font-size: 13px;
+            align-self: center;
+            /* margin-bottom: 10px; */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrap">
+
+        <div class="item">
+            <h1>活動/新知</h1>
+
+
+        </div>
+        <div class="nav">
+
+            <ul>
+                <li>
+                    <a href="https://ynews.page.link/Xa7r6">
+                        <div class="box">
+                            <div class="imgbox">
+                                <p><img src="./img/news/new1.png" alt=""></p>
+                            </div>
+                            <div class="textbox">
+                                <p>2024/11/5</p>
+                                <h3>巨石強森與克里斯伊凡聯手救出耶誕老人</h3>
+                                <h3>《紅色一號》重溫耶誕典故</h3>
+                                <p>圖為華納兄弟提供</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <a href="https://ynews.page.link/ucxHM">
+                        <div class="box">
+                            <p><img src="./img/news/new2.png" alt=""></p>
+                            <p>2024/10/24</p>
+                            <h3>文化部長李遠出席電影「乒乓男孩」首映會</h3>
+                            <p>圖為文化部提供， 中央社記者趙靜瑜傳真</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <a href="https://ynews.page.link/VTMpb">
+                        <div class="box">
+                            <p><img src="./img/news/new3.png" alt=""></p>
+                            <p>2024/10/22</p>
+                            <h3>《愛子歸來》臺北監獄首映會</h3>
+                            <h3>高牆內外眼淚與掌聲交織</h3>
+                            <p>圖為李靖惠導演提供</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <a href="https://ynews.page.link/k6rvE">
+                        <div class="box">
+                            <p><img src="./img/news/new4.png" alt=""></p>
+                            <p>2024/10/5</p>
+                            <h3>《劊樂小丑3》史上最恐怖電影？</h3>
+                            <h3>首映會11人離場、1人狂吐</h3>
+                            <p>圖翻攝自X@kill_lizt</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <a href="https://ynews.page.link/Y223N">
+                        <div class="box">
+                            <p><img src="./img/news/new5.png" alt=""></p>
+                            <p>2024/9/30</p>
+                            <h3>Lady Gaga倫敦《小丑：雙重瘋狂》首映！</h3>
+                            <h3>身穿敢小丑紅禮服驚豔全場！</h3>
+                            <p>圖為品牌提供</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <a href="https://ynews.page.link/qzuZi">
+                        <div class="box">
+                            <p><img src="./img/news/new6.png" alt=""></p>
+                            <p>2024/10/4</p>
+                            <h3>劉德華首映會當眾點名他！</h3>
+                            <h3>親手拉出列介紹 身份曝光是大咖歌手</h3>
+                            <p>圖為星空飛騰提供</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <a href="https://ynews.page.link/nyT8W">
+                        <div class="box">
+                            <p><img src="./img/news/new7.png" alt=""></p>
+                            <p>2024/9/22</p>
+                            <h3>伊朗雙名導控總統欺騙治國</h3>
+                            <h3>電影連遭2禁闖柏林奪獎</h3>
+                            <p>圖為海鵬提供</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <a href="https://ynews.page.link/Y223N">
+                        <div class="box">
+                            <p><img src="./img/news/new8.png" alt=""></p>
+                            <p>2024/9/30</p>
+                            <h3>小丑票房決戰!</h3>
+                            <h3>《劊樂小丑3》幹掉《小丑：雙重瘋狂》</h3>
+                            <p>圖為車庫娛樂提供</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <a href="https://ynews.page.link/b3MGQ">
+                        <div class="box">
+                            <p><img src="./img/news/new9.png" alt=""></p>
+                            <p>2024/10/9</p>
+                            <h3>向台灣電影工作者致敬</h3>
+                            <h3>李遠出席林書宇「小雁與吳愛麗」感敬佩</h3>
+                            <p>圖為文化部提供</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <a href="https://www.filmcommission.taipei/newsCT.aspx?id=10527">
+                        <div class="box">
+                            <p><img src="./img/news/new10.png" alt=""></p>
+                            <p>2024/9/2</p>
+                            <h3>《台北追緝令》首映 姜成鎬、桂綸鎂等群星</h3>
+                            <h3>逾3000位影迷塞爆台北街頭</h3>
+                            <p>圖為采昌國際多媒體提供</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+        <!-- 頁尾區 -->
+        <div class="footer">
+                <p id="info">
+                    <span>TEL / 02-780-1324</span>
+                    <span>Add / 360-61台北市大安區忠孝東路9段964號7樓</span>
+                    <span>E-mail / cornervision@gmail.com</span>
+                    <span>Fax / 02-780-2431</span>
+                </p>
+                <h4>Copyright &copy; Corner Vision Company 版權所有. Corner Vision Company All Rights Reserved.</h4>
+            </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

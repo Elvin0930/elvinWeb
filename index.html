@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="./lightbox/css/lightbox.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>探索影劇-CORNER VISION</title>
+    <style>
+        /* 米字是萬用字元符號 => 所有的HTML標籤 */
+        * {
+            /* 取消預設邊界 */
+            margin: 0;
+            /* 取消預設縮排 */
+            padding: 0;
+            /* 字型 */
+            font-family: 'Times New Roman', Times, serif;
+            /* font-family: '微軟正黑體'; */
+
+            list-style: none;
+            color: #fff;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .wrap {
+            width: 1200px;
+            margin: auto;
+            padding-top: 60px;
+            /* background-image: url("./img/banner_bg.jpg"); */
+        }
+
+        body {
+            background-color: #000000;
+        }
+
+
+        /* 頁首區 */
+        .header {
+            /* border: 1px solid red; */
+            /* 背景圖 */
+            background-image: url("./img/banner_bg.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 600px;
+        }
+
+        /* navRight */
+        .navRight {
+            float: right;
+            margin-top: 30px;
+            margin-right: 50px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 3px;
+        }
+
+        .navRight li {
+            display: inline;
+            padding: 10px;
+        }
+
+        .logo {
+            /* border: 1px solid rgb(255, 251, 0); */
+            padding-top: 140px;
+            width: 1200px;
+            text-align: center;
+        }
+
+        .logo h1 {
+            font-size: 80px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-bottom: 1px solid #fff;
+            width: 800px;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+
+        #nav1 {
+            margin-top: 10px;
+        }
+
+        #nav1 ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            /* 字距 */
+            letter-spacing: 3px;
+        }
+
+        #nav1 li {
+            /* display: inline; */
+            /* margin-right: 20px; */
+            list-style: none;
+        }
+
+        #nav1 li:hover ul {
+            /* 屬性:區塊元素 排列 */
+            display: block;
+        }
+
+        
+        #nav1 a {
+            display: block;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            /* background-color: #333; */
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            text-align: center;
+            transition: all .3s;
+        }
+
+        #nav1 a:hover {
+            /* background-color: #ccc; */
+            color: rgb(143, 143, 143);
+        }
+
+        #nav1 ul ul {
+            position: absolute;
+            display: none;
+            margin-top: 2px;
+        }
+
+        #nav li li {
+            /* 取消上面li的css寫的float: left;由左至右的方式，原始設定為由上至下排列 */
+            clear: left;
+        }
+
+        #nav1 li :hover ul {
+            display: block;
+        }
+
+        .rotate {
+            /* border: 1px solid rgb(21, 255, 0); */
+            width: 1200px;
+            margin: auto;
+        }
+
+        #info span {
+            margin: 5px;
+        }
+
+        /* 2024.11.14 */
+        .item {
+            margin-top: 20px;
+        }
+
+        .item h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .card {
+            /* 隱藏溢出的範圍 */
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            /* border: 1px solid rgb(21, 255, 0); */
+            width: 1200px;
+            margin-top: 80px;
+            text-align: center;
+            background-color: #333;
+            padding: 20px;
+        }
+
+        #info {
+            font-size: 14px;
+            align-self: center;
+            /* margin-bottom: 10px; */
+        }
+
+        #info h4 {
+            font-size: 13px;
+            align-self: center;
+            /* margin-bottom: 10px; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 最外層外框 -->
+    <div class="wrap">
+        <!-- 頁首區 -->
+        <div class="header">
+            <!-- 右側超連結 -->
+            <div class="navRight">
+                <ul>
+                    <li><a href="#">註冊</a></li>
+                    <li><a href="#">登入</a></li>
+                    <li><a href="#">語系</a></li>
+                </ul>
+            </div>
+            <!-- 中間選單區 -->
+            <div class="logo">
+                <!-- 左側LOGO -->
+                <h1>
+                    <!-- <img src="./img/logo.png" alt=""> -->
+                    CORNER VISION
+                </h1>
+
+                <div id="nav1">
+                    <ul>
+                        <li><a href="#">關於我們</a>
+                            <ul>
+                                <li><a href="#">品牌故事</a></li>
+                                <li><a href="#">品牌精神</a></li>
+                                <li><a href="#">核心人物</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">即將上映</a>
+                            <ul>
+                                <li><a href="#">亞洲出品</a></li>
+                                <li><a href="#">歐洲出品</a></li>
+                                <li><a href="#">北美洲出品</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">探索影劇</a>
+                            <ul>
+                                <li><a href="#">華語影劇</a></li>
+                                <li><a href="#">歐美影劇</a></li>
+                                <li><a href="#">經典電影</a></li>
+                                <li><a href="#">紀錄片</a></li>
+                                <li><a href="#">親子歡樂</a></li>
+                                <li><a href="#">歌舞劇</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">評論分享</a>
+                            <ul>
+                                <li><a target="_blank" href="./pro-critics.html">影評專家</a></li>
+                                <li><a href="#">同好分享區</a></li>
+                                <li><a href="#">心得分享/投稿</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">聯絡我們</a>
+                            <ul>
+                                <li><a href="#">意見箱</a></li>
+                                <li><a href="#">合作洽談</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">活動/新知</a>
+                            <ul>
+                                <li><a href="#">優惠專區</a></li>
+                                <li><a target="_blank" href="./news2.html">首映會消息</a></li>
+                                <li><a href="#">聯名商品</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 標題區 -->
+        <div class="item">
+            <h1>探索影劇</h1>
+            <!-- 輪轉圖 -->
+            <div class="rotate">
+
+                <ul>
+
+                    <li>
+                        <!-- 燈箱效果時的圖 -->
+                        <a href="./img/rotate_img/rotate_img1.png" data-lightbox="01">
+                            <!-- 縮圖時的圖 -->
+                            <img src="./img/rotate_img/rotate_img1.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/rotate_img/rotate_img2.png" data-lightbox="02">
+                            <img src="./img/rotate_img/rotate_img2.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/rotate_img/rotate_img3.png" data-lightbox="03">
+                            <img src="./img/rotate_img/rotate_img3.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/rotate_img/rotate_img4.png" data-lightbox="04">
+                            <img src="./img/rotate_img/rotate_img4.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/rotate_img/rotate_img5.png" data-lightbox="05">
+                            <img src="./img/rotate_img/rotate_img5.png" alt="">
+                        </a>
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- card區 -->
+        <div class="card">
+            <h2>華語影劇</h2>
+
+            <div class="card1">
+                <ul>
+                    <li>
+                        <!-- 燈箱效果時的圖 -->
+                        <a href="./img/card_asia/華語劇-切片_03.gif" data-lightbox="01">
+                            <!-- 縮圖時的圖 -->
+                            <img src="./img/card_asia/華語劇-切片_03.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_05.gif" data-lightbox="02">
+                            <img src="./img/card_asia/華語劇-切片_05.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_07.gif" data-lightbox="03">
+                            <img src="./img/card_asia/華語劇-切片_07.gif" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_09.gif" data-lightbox="04">
+                            <img src="./img/card_asia/華語劇-切片_09.gif" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_11.gif" data-lightbox="05">
+                            <img src="./img/card_asia/華語劇-切片_11.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_18.gif" data-lightbox="06">
+                            <img src="./img/card_asia/華語劇-切片_18.gif" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <h2>歐美影劇</h2>
+
+            <div class="card2">
+                <ul>
+
+                    <li>
+                        <!-- 燈箱效果時的圖 -->
+                        <a href="./img/card_america&europe/ame&europe-1_03.gif" data-lightbox="01">
+                            <!-- 縮圖時的圖 -->
+                            <img src="./img/card_america&europe/ame&europe-1_03.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_05.gif" data-lightbox="02">
+                            <img src="./img/card_america&europe/ame&europe-1_05.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_07.gif" data-lightbox="03">
+                            <img src="./img/card_america&europe/ame&europe-1_07.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_09.gif" data-lightbox="04">
+                            <img src="./img/card_america&europe/ame&europe-1_09.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_11.gif" data-lightbox="05">
+                            <img src="./img/card_america&europe/ame&europe-1_11.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_18.gif" data-lightbox="06">
+                            <img src="./img/card_america&europe/ame&europe-1_18.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_19.gif" data-lightbox="07">
+                            <img src="./img/card_america&europe/ame&europe-1_19.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_21.gif" data-lightbox="08">
+                            <img src="./img/card_america&europe/ame&europe-1_21.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_22.gif" data-lightbox="09">
+                            <img src="./img/card_america&europe/ame&europe-1_22.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_28.gif" data-lightbox="10">
+                            <img src="./img/card_america&europe/ame&europe-1_28.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_30.gif" data-lightbox="11">
+                            <img src="./img/card_america&europe/ame&europe-1_30.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_31.gif" data-lightbox="12">
+                            <img src="./img/card_america&europe/ame&europe-1_31.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_32.gif" data-lightbox="13">
+                            <img src="./img/card_america&europe/ame&europe-1_32.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_33.gif" data-lightbox="14">
+                            <img src="./img/card_america&europe/ame&europe-1_33.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_34.gif" data-lightbox="15">
+                            <img src="./img/card_america&europe/ame&europe-1_34.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_35.gif" data-lightbox="16">
+                            <img src="./img/card_america&europe/ame&europe-1_35.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_36.gif" data-lightbox="17">
+                            <img src="./img/card_america&europe/ame&europe-1_36.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_37.gif" data-lightbox="18">
+                            <img src="./img/card_america&europe/ame&europe-1_37.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_38.gif" data-lightbox="19">
+                            <img src="./img/card_america&europe/ame&europe-1_38.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_39.gif" data-lightbox="20">
+                            <img src="./img/card_america&europe/ame&europe-1_39.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_40.gif" data-lightbox="21">
+                            <img src="./img/card_america&europe/ame&europe-1_40.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_41.gif" data-lightbox="22">
+                            <img src="./img/card_america&europe/ame&europe-1_41.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_42.gif" data-lightbox="23">
+                            <img src="./img/card_america&europe/ame&europe-1_42.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_43.gif" data-lightbox="24">
+                            <img src="./img/card_america&europe/ame&europe-1_43.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_44.gif" data-lightbox="25">
+                            <img src="./img/card_america&europe/ame&europe-1_44.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_america&europe/ame&europe-1_45.gif" data-lightbox="26">
+                            <img src="./img/card_america&europe/ame&europe-1_45.gif" alt="">
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <h2>經典電影</h2>
+            <div class="card3">
+                <ul>
+
+                    <li>
+                        <!-- 燈箱效果時的圖 -->
+                        <a href="./img/card_classic/經典電影封面_03.gif" data-lightbox="01">
+                            <!-- 縮圖時的圖 -->
+                            <img src="./img/card_classic/經典電影封面_03.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_classic/經典電影封面_05.gif" data-lightbox="02">
+                            <img src="./img/card_classic/經典電影封面_05.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_classic/經典電影封面_07.gif" data-lightbox="03">
+                            <img src="./img/card_classic/經典電影封面_07.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_classic/經典電影封面_09.gif" data-lightbox="04">
+                            <img src="./img/card_classic/經典電影封面_09.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_classic/經典電影封面_11.gif" data-lightbox="05">
+                            <img src="./img/card_classic/經典電影封面_11.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_classic/經典電影封面_18.gif" data-lightbox="06">
+                            <img src="./img/card_classic/經典電影封面_18.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_classic/經典電影封面_19.gif" data-lightbox="07">
+                            <img src="./img/card_classic/經典電影封面_19.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_classic/經典電影封面_20.gif" data-lightbox="08">
+                            <img src="./img/card_classic/經典電影封面_20.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_classic/經典電影封面_21.gif" data-lightbox="09">
+                            <img src="./img/card_classic/經典電影封面_21.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_classic/經典電影封面_22.gif" data-lightbox="10">
+                            <img src="./img/card_classic/經典電影封面_22.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_classic/經典電影封面_28.gif" data-lightbox="11">
+                            <img src="./img/card_classic/經典電影封面_28.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_classic/經典電影封面_29.gif" data-lightbox="12">
+                            <img src="./img/card_classic/經典電影封面_29.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_classic/經典電影封面_30.gif" data-lightbox="13">
+                            <img src="./img/card_classic/經典電影封面_30.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_classic/經典電影封面_31.gif" data-lightbox="14">
+                            <img src="./img/card_classic/經典電影封面_31.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_classic/經典電影封面_32.png" data-lightbox="15">
+                            <img src="./img/card_classic/經典電影封面_32.png" alt="">
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>紀錄片區</h2>
+
+            <div class="card4">
+                <ul>
+
+                    <li>
+                        <!-- 燈箱效果時的圖 -->
+                        <a href="./img/card_documentary/紀錄片封面_03.gif" data-lightbox="01">
+                            <!-- 縮圖時的圖 -->
+                            <img src="./img/card_documentary/紀錄片封面_03.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_documentary/紀錄片封面_05.gif" data-lightbox="02">
+                            <img src="./img/card_documentary/紀錄片封面_05.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_documentary/紀錄片封面_07.gif" data-lightbox="03">
+                            <img src="./img/card_documentary/紀錄片封面_07.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_documentary/紀錄片封面_09.gif" data-lightbox="04">
+                            <img src="./img/card_documentary/紀錄片封面_09.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_documentary/紀錄片封面_11.gif" data-lightbox="05">
+                            <img src="./img/card_documentary/紀錄片封面_11.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_documentary/紀錄片封面_18.gif" data-lightbox="06">
+                            <img src="./img/card_documentary/紀錄片封面_18.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_documentary/紀錄片封面_19.gif" data-lightbox="07">
+                            <img src="./img/card_documentary/紀錄片封面_19.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_documentary/紀錄片封面_20.gif" data-lightbox="08">
+                            <img src="./img/card_documentary/紀錄片封面_20.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_documentary/紀錄片封面_21.gif" data-lightbox="09">
+                            <img src="./img/card_documentary/紀錄片封面_21.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_documentary/紀錄片封面_22.gif" data-lightbox="10">
+                            <img src="./img/card_documentary/紀錄片封面_22.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_documentary/紀錄片封面_28.gif" data-lightbox="11">
+                            <img src="./img/card_documentary/紀錄片封面_28.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_documentary/紀錄片封面_29.gif" data-lightbox="12">
+                            <img src="./img/card_documentary/紀錄片封面_29.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_documentary/紀錄片封面_30.gif" data-lightbox="13">
+                            <img src="./img/card_documentary/紀錄片封面_30.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_documentary/紀錄片封面_31.gif" data-lightbox="14">
+                            <img src="./img/card_documentary/紀錄片封面_31.gif" alt="">
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>親子歡樂區</h2>
+            <div class="card5">
+                <ul>
+                    <li>
+                        <a href="./img/card_Parent child/親子兒童-封面_03.gif" data-lightbox="01">
+                            <img src="./img/card_Parent child/親子兒童-封面_03.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_Parent child/親子兒童-封面_05.gif" data-lightbox="02">
+                            <img src="./img/card_Parent child/親子兒童-封面_05.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_Parent child/親子兒童-封面_07.gif" data-lightbox="7">
+                            <img src="./img/card_Parent child/親子兒童-封面_07.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_Parent child/親子兒童-封面_09.gif" data-lightbox="04">
+                            <img src="./img/card_Parent child/親子兒童-封面_09.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_Parent child/親子兒童-封面_11.gif" data-lightbox="05">
+                            <img src="./img/card_Parent child/親子兒童-封面_11.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_Parent child/親子兒童-封面_18.gif" data-lightbox="06">
+                            <img src="./img/card_Parent child/親子兒童-封面_18.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_Parent child/親子兒童-封面_19.gif" data-lightbox="07">
+                            <img src="./img/card_Parent child/親子兒童-封面_19.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_Parent child/親子兒童-封面_20.gif" data-lightbox="08">
+                            <img src="./img/card_Parent child/親子兒童-封面_20.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_Parent child/親子兒童-封面_21.gif" data-lightbox="09">
+                            <img src="./img/card_Parent child/親子兒童-封面_21.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_Parent child/親子兒童-封面_22.gif" data-lightbox="10">
+                            <img src="./img/card_Parent child/親子兒童-封面_22.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_Parent child/親子兒童-封面_28.gif" data-lightbox="11">
+                            <img src="./img/card_Parent child/親子兒童-封面_28.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_Parent child/親子兒童-封面_29.gif" data-lightbox="12">
+                            <img src="./img/card_Parent child/親子兒童-封面_29.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_Parent child/親子兒童-封面_30.gif" data-lightbox="13">
+                            <img src="./img/card_Parent child/親子兒童-封面_30.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_Parent child/親子兒童-封面_31.gif" data-lightbox="14">
+                            <img src="./img/card_Parent child/親子兒童-封面_31.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_Parent child/親子兒童-封面_32.png" data-lightbox="15">
+                            <img src="./img/card_Parent child/親子兒童-封面_32.png" alt="">
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>歌舞劇</h2>
+            <div class="card6">
+                <ul>
+
+                    <li>
+                        <a href="./img/card_musical/音樂類型-封面_05.gif" data-lightbox="01">
+                            <img src="./img/card_musical/音樂類型-封面_05.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_musical/音樂類型-封面_07.gif" data-lightbox="01">
+                            <img src="./img/card_musical/音樂類型-封面_07.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_musical/音樂類型-封面_09.gif" data-lightbox="01">
+                            <img src="./img/card_musical/音樂類型-封面_09.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_musical/音樂類型-封面_11.gif" data-lightbox="01">
+                            <img src="./img/card_musical/音樂類型-封面_11.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_musical/音樂類型-封面_18.gif" data-lightbox="01">
+                            <img src="./img/card_musical/音樂類型-封面_18.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_musical/音樂類型-封面_19.gif" data-lightbox="01">
+                            <img src="./img/card_musical/音樂類型-封面_19.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_musical/音樂類型-封面_20.gif" data-lightbox="01">
+                            <img src="./img/card_musical/音樂類型-封面_20.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_musical/音樂類型-封面_21.gif" data-lightbox="01">
+                            <img src="./img/card_musical/音樂類型-封面_21.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_musical/音樂類型-封面_22.gif" data-lightbox="01">
+                            <img src="./img/card_musical/音樂類型-封面_22.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_musical/音樂類型-封面_28.gif" data-lightbox="01">
+                            <img src="./img/card_musical/音樂類型-封面_28.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_musical/音樂類型-封面_29.gif" data-lightbox="01">
+                            <img src="./img/card_musical/音樂類型-封面_29.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_musical/音樂類型-封面_30.gif" data-lightbox="01">
+                            <img src="./img/card_musical/音樂類型-封面_30.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_musical/音樂類型-封面_31.gif" data-lightbox="01">
+                            <img src="./img/card_musical/音樂類型-封面_31.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_musical/音樂類型-封面_32.png" data-lightbox="01">
+                            <img src="./img/card_musical/音樂類型-封面_32.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_19.gif" data-lightbox="07">
+                            <img src="./img/card_asia/華語劇-切片_19.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_21.gif" data-lightbox="08">
+                            <img src="./img/card_asia/華語劇-切片_21.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_28.gif" data-lightbox="10">
+                            <img src="./img/card_asia/華語劇-切片_28.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_29.gif" data-lightbox="11">
+                            <img src="./img/card_asia/華語劇-切片_29.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_31.gif" data-lightbox="12">
+                            <img src="./img/card_asia/華語劇-切片_31.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_32.png" data-lightbox="13">
+                            <img src="./img/card_asia/華語劇-切片_32.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_33.gif" data-lightbox="14">
+                            <img src="./img/card_asia/華語劇-切片_33.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_34.gif" data-lightbox="15">
+                            <img src="./img/card_asia/華語劇-切片_34.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_35.gif" data-lightbox="16">
+                            <img src="./img/card_asia/華語劇-切片_35.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_36.gif" data-lightbox="17">
+                            <img src="./img/card_asia/華語劇-切片_36.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_37.gif" data-lightbox="18">
+                            <img src="./img/card_asia/華語劇-切片_37.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_38.gif" data-lightbox="19">
+                            <img src="./img/card_asia/華語劇-切片_38.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_39.gif" data-lightbox="20">
+                            <img src="./img/card_asia/華語劇-切片_39.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_40.gif" data-lightbox="21">
+                            <img src="./img/card_asia/華語劇-切片_40.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_41.gif" data-lightbox="22">
+                            <img src="./img/card_asia/華語劇-切片_41.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_42.gif" data-lightbox="23">
+                            <img src="./img/card_asia/華語劇-切片_42.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_43.gif" data-lightbox="24">
+                            <img src="./img/card_asia/華語劇-切片_43.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_44.gif" data-lightbox="25">
+                            <img src="./img/card_asia/華語劇-切片_44.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_45.gif" data-lightbox="26">
+                            <img src="./img/card_asia/華語劇-切片_45.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_46.gif" data-lightbox="27">
+                            <img src="./img/card_asia/華語劇-切片_46.gif" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./img/card_asia/華語劇-切片_47.png" data-lightbox="28">
+                            <img src="./img/card_asia/華語劇-切片_47.png" alt="">
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- 頁尾區 -->
+        <div class="footer">
+            <p id="info">
+                <span>TEL / 02-780-1324</span>
+                <span>Add / 360-61台北市大安區忠孝東路9段964號7樓</span>
+                <span>E-mail / cornervision@gmail.com</span>
+                <span>Fax / 02-780-2431</span>
+            </p>
+            <h4>Copyright &copy; Corner Vision Company 版權所有. Corner Vision Company All Rights Reserved.</h4>
+        </div>
+    </div>
+
+
+
+    <!-- 相片旋轉木馬輪播效果 -->
+    <!-- jQuery主程式 -->
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <!-- <script src="./lightbox/js/lightbox.js"></script> -->
+    <!-- 旋轉木馬主程式 -->
+    <script src="./js/jquery.jcarousellite.min.js"></script>
+    <!-- 自行撰寫JS  -->
+    <!-- 駝峰式命名 -->
+    <!-- 小駝峰(第二個單字開始的字首為大寫) -->
+    <!-- 大駝峰(每一個單字開始的字首為大寫) -->
+    <script>
+        $(function () {
+            $('.rotate').jCarouselLite({
+                auto: 1500, //多久時間捲動(以毫秒為單位:1秒=1000毫秒)
+                speed: 1700, //每次捲動的速度
+                scroll: 1, //每次捲動的張數
+                visible: 1, //可見的張數
+            });
+        });
+
+        $(function () {
+            $('.card1').jCarouselLite({
+                auto: 1500, //多久時間捲動(以毫秒為單位:1秒=1000毫秒)
+                speed: 1900, //每次捲動的速度
+                scroll: 2, //每次捲動的張數
+                visible: 4, //可見的張數
+            });
+        });
+
+        $(function () {
+            $('.card2').jCarouselLite({
+                auto: 1500, //多久時間捲動(以毫秒為單位:1秒=1000毫秒)
+                speed: 1900, //每次捲動的速度
+                scroll: 2, //每次捲動的張數
+                visible: 4, //可見的張數
+            });
+        });
+
+        $(function () {
+            $('.card3').jCarouselLite({
+                auto: 1500, //多久時間捲動(以毫秒為單位:1秒=1000毫秒)
+                speed: 1900, //每次捲動的速度
+                scroll: 2, //每次捲動的張數
+                visible: 4, //可見的張數
+            });
+        });
+
+        $(function () {
+            $('.card4').jCarouselLite({
+                auto: 1500, //多久時間捲動(以毫秒為單位:1秒=1000毫秒)
+                speed: 1900, //每次捲動的速度
+                scroll: 2, //每次捲動的張數
+                visible: 4, //可見的張數
+            });
+        });
+
+        $(function () {
+            $('.card5').jCarouselLite({
+                auto: 1500, //多久時間捲動(以毫秒為單位:1秒=1000毫秒)
+                speed: 1900, //每次捲動的速度
+                scroll: 2, //每次捲動的張數
+                visible: 4, //可見的張數
+            });
+        });
+
+        $(function () {
+            $('.card6').jCarouselLite({
+                auto: 1500, //多久時間捲動(以毫秒為單位:1秒=1000毫秒)
+                speed: 1900, //每次捲動的速度
+                scroll: 2, //每次捲動的張數
+                visible: 4, //可見的張數
+            });
+        });
+    </script>
+
+</body>
+
+</html>

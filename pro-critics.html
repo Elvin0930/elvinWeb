@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        /* 米字是萬用字元符號 => 所有的HTML標籤 */
+        /* 做一些預設的處理 */
+        * {
+            /* 取消預設邊界 */
+            margin: 0;
+            /* 取消預設縮排 */
+            padding: 0;
+            /* 字型 */
+            font-family: '微軟正黑體', 'Times New Roman', Times, serif;
+
+            list-style: none;
+            color: rgb(0, 0, 0);
+        }
+
+
+        body {
+            background-color: black;
+        }
+
+        .wrap {
+            width: 1200px;
+            margin: auto;
+            margin-top: 100px;
+            /* 內容水平對齊置中 */
+            text-align: center;
+        }
+
+        .item {
+            /* border: 1px solid rgb(255, 60, 0); */
+            width: 1200px;
+            /* margin: auto; */
+            /* 內容水平對齊置中 */
+            /* text-align: center; */
+        }
+
+        .item h1 {
+            font-size: 35px;
+            color: rgb(255, 255, 255);
+            font-family: Arial, Helvetica, sans-serif;
+            width: 600px;
+            border-bottom: 1px solid #fff;
+            /* text-align: center; */
+            margin: auto;
+        }
+
+        .box {
+            display: inline-block;
+            width: 600px;
+            background-color: rgb(255, 255, 255);
+            padding: 0px;
+            margin: 30px;
+            border-radius: 12px;
+            transition: all .5s;
+            /* 陰影效果 */
+            /* box-shadow: 水平位置 垂直位置 模糊度 陰影色彩; */
+            /* box-shadow: 10px -10px 10px #000; */
+
+            /* 上下左右都有陰影區 */
+            /* box-shadow: 0 0 0px rgba(206, 206, 206, 0.3); */
+        }
+
+        /* 碰到色塊 */
+        .box:hover {
+            transform: scale(1.1);
+            transition: all .7s;
+            box-shadow: 0 0 0px rgba(206, 206, 206, 0.3);
+        }
+
+        .box img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            transition: all .1s;
+        }
+
+        /* 碰到色塊時的圖片效果 */
+        .box:hover img {
+            transform: scale(1.07);
+            size: cover;
+            position: center;
+        }
+
+        .box h3{
+            color: #000000;
+            text-align: left;
+            padding: 10px;
+        }
+
+        .box h4 {
+            color: #3b3b3b;
+            text-align: left;
+            padding: 10px;
+        }
+
+        .box h5{
+            color: rgb(100, 100, 100);
+            text-align: left; 
+        }
+
+        .box p {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            padding-left: 10px;
+            font-size: 12px;
+            color: rgb(100, 100, 100);
+            text-align: left;
+        }
+
+        .imgbox {
+            width: 300px;
+            height: 200px;
+            margin-top: 0px;
+        }
+
+        .footer {
+            /* border: 1px solid rgb(21, 255, 0); */
+            width: 1200px;
+            height: 50px;
+            margin-top: 20px;
+            text-align: center;
+            padding-top: 50px;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrap">
+
+        <div class="item">
+            <h1>專業影評家專欄</h1>
+        </div>
+
+        <ul>
+            <li>
+                <a href="https://nofilmnome.com/twilight-of-the-warriors-walled-in-review/">
+                    <div class="box">
+
+                        <div class="imgbox">
+                            <p><img src="./img/pro-critics/pro-critics01.jpg" alt=""></p>
+                        </div>
+
+                        <h5>2024/5/21</h5>
+                        <h5>影評家:翁煌德</h5>
+                        <h3>《九龍城寨之圍城:2024》潛藏香港政治之下的指涉</h3>
+                        <h4>
+                            九龍城寨的歷史，就是香港現代變遷史的縮影。
+                            《九龍城寨之圍城》固然是一部拳拳到肉的商業武打片，
+                            但對比去年的《命案》（2023）等作，
+                            依然可以看見鄭保瑞作為一個創作者將國族與時代處境融入故事的企圖心。
+                            無論從哪一個角度切入，
+                            它都是一部耐人尋味的傑出奇作。
+                        </h4>
+                        <p>圖為NEW Trailer提供</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="https://medium.com/@edslivingroom/scrapper-59b31cc3b3fa">
+                    <div class="box">
+                        <p><img src="./img/pro-critics/pro-critics02.jpg" alt=""></p>
+                        <p>2024/1/21</p><h5>影評家:M小姐的電影客廳</h5>
+                        <h3>《怪胎女孩》Scrapper ：看見父女的另類詮釋</h3>
+                        <h4>
+                            第一個浮現的印象不外乎「社會底層的關懷或階級抗爭」或是「英式幽默」，
+                            《怪胎女孩》恰巧兩者兼具，
+                            電影以一種幽微的形式讓觀眾注意到角色的貧窮，
+                            但他們面對處境並未往下沈淪，
+                            亦未慍怒，而是用達觀、笑看人生的態度重新開始，
+                            從這個角度來說，
+                            這部電影本身也許也能說是「怪胎」，
+                            然而也是這種怪而能治癒人。
+                        </h4>
+                        <p>圖為M小姐的電影客廳提供</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="https://opinion.cw.com.tw/blog/profile/304/article/15367">
+                    <div class="box">
+                        <p><img src="./img/pro-critics/pro-critics03.jpg" alt=""></p>
+                        <p>2024/10/10</p><h5>影評家:吳老拍</h5>
+                        <h3>
+                            《與夢前行宮﨑駿》：不只是《蒼鷺與少年》紀錄，
+                            更帶你走進83歲動畫大師的創作實境與人生探問
+                        </h3>
+                        <h4>
+                            宮﨑駿的動畫很強調分鏡，這也正是動畫製作的基礎。
+                            他從人物動作到背景全都要細緻描繪，
+                            創造出的奇幻世界令觀眾嘖嘖稱奇，而動畫中的真實感，
+                            正在於細節的營造。
+                            一般觀眾不會特別注意到小細節，
+                            但要是小地方沒做好，就容易讓人覺得好像哪裡不太對。
+                            正是因為這些細節的完美，
+                            才營造出一個讓人感到真實的世界。
+                        </h4>
+                        <p>圖為甲上娛樂提供</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="https://a2z.fhl.net/movie/movie44.html">
+                    <div class="box">
+                        <p><img src="./img/pro-critics/pro-critics05.jpg" alt=""></p>
+                        <p>2021/12/16</p><h5>影評家:M小姐的電影客廳</h5>
+                        <h3>《搬家》：孩子在父母失和中被迫長大</h3>
+                        <h4>
+                            這部電影並非毫無缺點，在接近結尾處，
+                            蓮在度假勝地巧遇一位正在澆花的老者，
+                            他對著蓮講述關於記憶的人生哲理，蓮進而獲得頓悟，
+                            筆者覺得這段有些刻意，其實不用那個橋段，
+                            我們觀眾與蓮都知道，
+                            甜美的過去終究只會停留在過去，
+                            唯有接受現實，才能往前走、創造自己的未來。
+                        </h4>
+                        <p>圖為M小姐的電影客廳提供</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="https://opinion.cw.com.tw/blog/profile/57/article/15345">
+                    <div class="box">
+                        <p><img src="./img/pro-critics/pro-critics06.jpg" alt=""></p>
+                        <p>2024/10/4</p><h5>影評家:米果</h5>
+                        <h3>關於吳慷仁，我想的其實是高嘉岳與郭軫、王赦和郭曉其</h3>
+                        <h4>
+                            他過去在台灣一直沒有經紀人，可能是因為這個原因，
+                            讓他接戲的好球帶很廣，而他的個人社群帳號，
+                            都不是公關角度的那種小心翼翼、四平八穩、深怕犯錯的貼文，
+                            因為沒有小編，所以有他自己的看法，
+                            而粉絲也喜歡他的看法，這是他在台灣可以持續走紅，
+                            且成績不錯的原因吧！
+                        </h4>
+                        <p>圖片來源：《有生之年》劇照</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="https://opinion.cw.com.tw/blog/profile/462/article/15336">
+                    <div class="box">
+                        <p><img src="./img/pro-critics/pro-critics07.jpg" alt=""></p>
+                        <p>2024/10/2</p><h5>影評家:盧郁佳</h5>
+                        <h3>動畫《魔法阿媽》王小棣團隊與麥人杰爭議：如果時間能重來，這次會不會更好？</h3>
+                        <h4>
+                            麥人杰才氣縱橫，毫無疑問是世界級，
+                            沒人知道他可飛多高。希臘神話中，
+                            巧匠用蠟黏出羽毛翅膀騰空逃出迷宮，
+                            要兒子伊卡洛斯別飛太高，以免太陽融化。
+                            但伊卡洛斯第一次飛上高空，心醉神迷，不顧警告，
+                            飛近太陽而失墜。
+                        </h4>
+                        <p>圖片來源：《魔法阿媽》劇照</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="https://opinion.cw.com.tw/blog/profile/462/article/13935">
+                    <div class="box">
+                        <p><img src="./img/pro-critics/pro-critics08.jpg" alt=""></p>
+                        <p>2023/8/14</p><h5>影評家:張茵惠</h5>
+                        <h3>要公平！要正義！《芭比》與男權運動者的受害敘事</h3>
+                        <h4>
+                            葛莉塔‧潔薇作為電影製片人的整個職業生涯
+                            就是一場將女孩時期材料重新紡織成藝術的運動。
+                            把兒時回憶昇華成大人也願意看的商業作品推上螢光幕，
+                            過去經常是屬於男性導演、男性主題的專利。
+                            因此，要說潔薇的《芭比》沒有製造值得紀念的里程碑，
+                            也不太公道。
+                        </h4>
+                        <p>圖片來源：《Barbie芭比》劇照</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="https://opinion.cw.com.tw/blog/profile/385/article/15249">
+                    <div class="box">
+                        <p><img src="./img/pro-critics/pro-critics09.jpg" alt=""></p>
+                        <p>2024/9/6</p><h5>影評家:潘怡豪</h5>
+                        <h3>如果孤獨死是我們共同的未來：《人生清理員》直觸你不敢正視的社會現實</h3>
+                        <h4>
+                            這次的美術指導陳韋中要將許多實際案例還原，
+                            他說明籌備期即與美術組的夥伴們去現場實習觀摩，
+                            「雖然我們在去之前都已經在國內外影片上看到很多案例跟影片，
+                            但真實到現場的感受完全不一樣，特別是現場的氣味，
+                            即便是戴上口罩還閉氣了，還是會透過視神經直達嗅覺系統，
+                            那個完全是躲不掉的，
+                            而你會很明顯知道這就是死亡的味道。」
+                        </h4>
+                        <p>圖為果陀娛樂提供</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="https://opinion.cw.com.tw/blog/profile/486/article/14941">
+                    <div class="box">
+                        <p><img src="./img/pro-critics/pro-critics10.jpg" alt=""></p>
+                        <p>2024/6/6</p><h5>影評家:劉仲書</h5>
+                        <h3>《幻幻之交》：我們不因幻想而不真實</h3>
+                        <h4>
+                            這些經歷，正是「故事」。
+                            在小碧的兒童時期，小碧媽媽會請小碧講故事給她聽。
+                            這段情節很有意思，因為一般都是反過來的，
+                            父母會透過對子女講故事來連結親子情感、透過劇情寓教於樂地灌輸價值觀；
+                            而這一對父母對小碧的互動方式，
+                            反而明顯感受到是一種完全信任與重視她成長主體的愛的形式，
+                            光是這點我就深受感動。
+                            而讓小碧講故事本身，也讓她建構了豐富的世界觀，
+                            進而能在幻幻社區裡面任意玩弄想像力，
+                            令卡爾招架不過來。
+                        </h4>
+                        <p>圖片來源：《幻幻之交》劇照</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="https://opinion.cw.com.tw/blog/profile/57/article/14973">
+                    <div class="box">
+                        <p><img src="./img/pro-critics/pro-critics11.jpg" alt=""></p>
+                        <p>2024/6/14</p><h5>影評家:米果</h5>
+                        <h3>看電影《哥吉拉-1.0》必須冷靜的理由</h3>
+                        <h4>
+                            那種冷靜很難形容，並不是電影不好看或沒有共鳴，
+                            反倒是因為太多觸到內心的點，非得專注不可。
+                            想看哥吉拉怪獸跟人類決鬥的娛樂爽片觀眾，
+                            可能也會覺得哥吉拉「本人」好像也過於冷靜。
+                            為了對抗哥吉拉或說保衛戰後東京的那種集體團結的行動，
+                            讓「人」的各種面貌變得很鮮明。
+                        </h4>
+                        <p>圖片來源：《哥吉拉-1.0》劇照</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="https://opinion.cw.com.tw/blog/profile/562/article/14841">
+                    <div class="box">
+                        <p><img src="./img/pro-critics/pro-critics12.jpg" alt=""></p>
+                        <p>2024/5/7</p><h5>影評家:李若雯</h5>
+                        <h3>《馴鹿寶貝》：收了四萬封郵件的被害人，與跟蹤狂會是什麼關係？</h3>
+                        <h4>
+                            馴鹿寶貝，如此人畜無害的片名，卻是個你無法想像的瘋狂故事。
+                            這是英國目前討論度最高的劇集，而台灣的口碑也正默默發燒，
+                            只因為這故事實在太瘋、太精彩，
+                            但對幽微人性的刻畫卻又是如此的精準，
+                            一打開，絕對停不下來。
+                        </h4>
+                        <p>圖片來源：《馴鹿寶貝》劇照</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="https://opinion.cw.com.tw/blog/profile/492/article/14794">
+                    <div class="box">
+                        <p><img src="./img/pro-critics/pro-critics13.jpg" alt=""></p>
+                        <p>2024/4/27</p><h5>影評家:吳品瑜</h5>
+                        <h3>失「勿」招領的前任──《不夠善良的我們》的自傷與療癒</h3>
+                        <h4>
+                            戀愛中，卻發現自己根本沒得選，
+                            因為早被主流價值分配好了角色，
+                            僅剩無法自主的情慾、討好的生存手段，
+                            再加上感情忠誠的自我約束，
+                            讓明明時效僅有一暝的青春，
+                            卻硬是蹉跎成對方的「久而久之」。
+                        </h4>
+                        <p>圖片來源：《不夠善良的我們》劇照</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="https://opinion.cw.com.tw/blog/profile/57/article/14754">
+                    <div class="box">
+                        <p><img src="./img/pro-critics/pro-critics14.jpg" alt=""></p>
+                        <p>2024/4/12</p><h5>影評家:米果</h5>
+                        <h3>鹽水大飯店的滋味</h3>
+                        <h4>
+                            劇的前半有很濃的革命青春味，
+                            主角文欽的家庭是很傳統的清苦農家，
+                            進入公家機關工作的文欽有著左派青年的熱血理想，
+                            同時還有翻轉家庭經濟的掙扎與妥協。
+                        </h4>
+                        <p>圖片來源：《鹽水大飯店》劇照</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="https://opinion.cw.com.tw/blog/profile/300/article/14662">
+                    <div class="box">
+                        <p><img src="./img/pro-critics/pro-critics15.jpg" alt=""></p>
+                        <p>2024/3/17</p><h5>影評家:洪德青</h5>
+                        <h3>史上第一位愛爾蘭奧斯卡影帝：我所知道的齊里安墨菲</h3>
+                        <h4>
+                            返鄉後，他成為愛爾蘭電影新浪潮的指標性人物，
+                            啟發了Barry Keoghan、Paul Mescal和Andrew Scott等新生代演員，
+                            但他始終跟影壇的人事保持一定的距離。
+                            齊里安是嚴肅型演員，不喜歡鎂光燈，
+                            對私領域極端保護，不與人社交，
+                            偶爾走個紅毯也不自在，
+                            他完全不想克服這些事情。
+                        </h4>
+                        <p>圖片來源：截取自cillianmurphyofficiall Instagram</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- 頁尾區 -->
+    <div class="footer">
+        <h4>Copyright &copy; Corner Vision Company 版權所有. Corner Vision Company All Rights Reserved.</h4>
+    </div>
+
+</body>
+
+</html>
